@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晚餐隨機產生器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>晚餐隨機產生器</h1>
+    <button onclick="generateDinner()">我想吃什麼？</button>
+    <p id="output"></p>
+
+    <script>
+        function generateDinner() {
+            const dinners = [
+                "炸雞",
+                "披薩",
+                "壽司",
+                "義大利麵",
+                "火鍋",
+                "漢堡",
+                "拉麵",
+                "韓式炸雞",
+                "中式炒飯",
+                "墨西哥炸捲",
+                "印度咖哩",
+                "素食沙拉"
+            ];
+
+            const randomIndex = Math.floor(Math.random() * dinners.length);
+            const randomDinner = dinners[randomIndex];
+
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = `今晚的晚餐是：${randomDinner}`;
+        }
+    </script>
+</body>
+</html>
